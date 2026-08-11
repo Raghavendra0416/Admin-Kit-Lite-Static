@@ -1,0 +1,227 @@
+/* ==================================================
+   DASHBOARD PAGE
+   ================================================== */
+
+.dashboard-overview {
+    margin-bottom: var(--space-lg);
+}
+
+.dashboard-overview p {
+    margin-bottom: 0;
+}
+
+.activity {
+    margin-top: var(--space-xl);
+}
+
+.activity ul,
+.status ul {
+    margin-bottom: 0;
+}
+
+.status {
+    margin-top: var(--space-lg);
+}
+
+.dashboard-page .dashboard-overview,
+.users-page .users-intro,
+.settings-page .settings-intro,
+.registration-page > h2 {
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid rgb(148 163 184 / 0.18);
+    margin-bottom: var(--space-lg);
+}
+
+/* ==================================================
+   USERS PAGE
+   ================================================== */
+
+.users-intro {
+    margin-bottom: var(--space-lg);
+}
+
+.users-intro p {
+    margin-bottom: 0;
+}
+
+.user-search {
+    margin-bottom: var(--space-lg);
+}
+
+.user-search form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: var(--space-md);
+}
+
+.user-search form label {
+    grid-column: 1 / -1;
+}
+
+/* ==================================================
+   SETTINGS PAGE
+   ================================================== */
+
+.settings-intro {
+    margin-bottom: var(--space-lg);
+}
+
+.settings-intro p {
+    margin-bottom: 0;
+}
+
+/* Profile */
+
+.profile {
+    margin-bottom: var(--space-lg);
+}
+
+.profile,
+.notifications,
+.security {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: var(--space-md);
+    row-gap: var(--space-sm);
+}
+
+.profile > legend,
+.notifications > legend,
+.security > legend {
+    grid-column: 1 / -1;
+}
+
+/* Notifications */
+
+.notifications {
+    margin-bottom: var(--space-lg);
+}
+
+/* Security */
+
+.security {
+    margin-bottom: var(--space-lg);
+}
+
+/* Make checkbox controls visually grouped */
+
+.notifications input[type="checkbox"],
+.security input[type="checkbox"] {
+    align-self: center;
+}
+
+.notifications input[type="checkbox"] + label,
+.security input[type="checkbox"] + label {
+    margin-bottom: 0;
+}
+
+/* ==================================================
+   REGISTRATION PAGE
+   ================================================== */
+
+.registration-page > section:first-of-type {
+    margin-bottom: var(--space-lg);
+}
+
+.registration-page > section:first-of-type h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.registration-page > section:nth-of-type(2) {
+    padding: var(--space-lg);
+    background: linear-gradient(180deg, rgb(255 255 255 / 0.98), rgb(248 250 252 / 0.96));
+    border: 1px solid rgb(226 232 240 / 0.95);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Registration form */
+
+.registration-page form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: var(--space-md);
+    row-gap: var(--space-sm);
+}
+
+.registration-page form > * {
+    min-width: 0;
+}
+
+.registration-page form > .form-actions,
+.registration-page form > hr {
+    grid-column: 1 / -1;
+}
+
+/* Registration checkbox */
+
+.registration-page input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    align-self: center;
+}
+
+.registration-page input[type="checkbox"] + label {
+    margin-bottom: 0;
+}
+
+/* Success message section */
+
+.registration-page > section:nth-of-type(3) {
+    padding: var(--space-lg);
+    margin-top: var(--space-xl);
+    border: 1px solid var(--color-success);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-success-background);
+}
+
+.registration-page > section:nth-of-type(3) p {
+    margin-bottom: 0;
+    color: var(--color-success);
+    font-weight: 600;
+}
+
+/* Validation error section */
+
+.registration-page > section:nth-of-type(4) {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-error);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-error-background);
+}
+
+.registration-page > section:nth-of-type(4) p {
+    margin-bottom: 0;
+    color: var(--color-error);
+    font-weight: 600;
+}
+
+/* ==================================================
+   RESPONSIVE PAGE STYLES
+   ================================================== */
+
+@media (max-width: 768px) {
+    .user-search form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: var(--space-md);
+    }
+
+    .activity,
+    .status,
+    .user-search,
+    .user-table,
+    .settings-intro,
+    .registration-page > section:nth-of-type(2),
+    .registration-page > section:nth-of-type(3),
+    .registration-page > section:nth-of-type(4) {
+        padding: var(--space-md);
+    }
+}

@@ -1,0 +1,193 @@
+/* =========================
+   Global Reset
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-md);
+    line-height: 1.65;
+    color: var(--color-text);
+    background:
+        radial-gradient(circle at top left, rgb(37 99 235 / 0.14), transparent 32%),
+        radial-gradient(circle at top right, rgb(14 165 233 / 0.14), transparent 28%),
+        linear-gradient(180deg, var(--color-background), var(--color-background-alt));
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   Typography
+   ========================= */
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2rem, 3vw, var(--font-size-3xl));
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 2vw, var(--font-size-xl));
+    font-weight: 750;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+p {
+    color: var(--color-text-muted);
+}
+
+/* =========================
+   Links
+   ========================= */
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* =========================
+   Forms
+   ========================= */
+
+label {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.85rem 0.95rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface-strong);
+    color: var(--color-text);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.75);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgb(37 99 235 / 0.2);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgb(37 99 235 / 0.12);
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), opacity var(--transition-fast);
+}
+
+button:focus-visible,
+input[type="checkbox"]:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* =========================
+   Lists
+   ========================= */
+
+ul {
+    padding-left: 1.1rem;
+}
+
+/* =========================
+   Tables
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-strong);
+}
+
+th,
+td {
+    padding: 0.95rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+th {
+    font-weight: 700;
+    background: linear-gradient(180deg, #f8fafc, #eef2f7);
+    color: var(--color-text);
+}
+
+tbody tr:hover {
+    background-color: rgb(37 99 235 / 0.04);
+}
+
+/* =========================
+   Horizontal Rule
+   ========================= */
+
+hr {
+    border: 0;
+    border-top: 1px solid rgb(148 163 184 / 0.24);
+    margin: var(--space-xl) 0;
+}
+
+::selection {
+    background: rgb(37 99 235 / 0.18);
+    color: var(--color-text);
+}

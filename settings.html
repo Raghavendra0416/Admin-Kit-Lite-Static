@@ -1,0 +1,85 @@
+<!-- Settings -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Kit</title>
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/pages.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Admin Kit</h1>
+        <p>Welcome, Raghavendra</p>
+    </header>
+
+    <nav class="nav-links">
+        <a href="index.html" class="link">Dashboard</a>
+        <a href="users.html" class="link">Users</a>
+        <a href="settings.html" class="link">Settings</a>
+        <a href="registration.html" class="link">Registration</a>
+    </nav>
+
+    <main class="settings-page">
+        <section class="settings-intro">
+            <h2>Settings</h2>
+            <p>Manage your account and application preferences.</p>
+        </section>
+
+        <form>
+            <fieldset class="profile">
+                <legend>Profile</legend>
+                <label for="full-name">Full Name</label>
+                <input type="text" name="full-name" id="full-name" placeholder="Please Enter your FullName"
+                    autocomplete="name" required>
+
+                <label for="email-address">Email Address</label>
+                <input type="email" name="email-address" id="email-address" placeholder="Please Enter your Email"
+                    autocomplete="email" required>
+            </fieldset>
+
+            <fieldset class="notifications">
+                <legend>Notifications</legend>
+
+                <input type="checkbox" name="email-notifications" id="email-notifications">
+                <label for="email-notifications">Email Notifications</label>
+
+                <input type="checkbox" name="push-notifications" id="push-notifications">
+                <label for="push-notifications">Push Notifications</label>
+
+                <input type="checkbox" name="sms-notifications" id="sms-notifications">
+                <label for="sms-notifications">SMS Notifications</label>
+            </fieldset>
+
+            <fieldset class="security">
+                <legend>Security</legend>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="********" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="********"
+                    autocomplete="new-password" required>
+
+                <input type="checkbox" name="two-factor-authentication" id="two-factor-authentication">
+                <label for="two-factor-authentication">Enable Two-Factor Authentication</label>
+            </fieldset>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </main>
+
+    <footer>
+        © 2026 AdminKit Lite
+    </footer>
+</body>
+
+</html>
